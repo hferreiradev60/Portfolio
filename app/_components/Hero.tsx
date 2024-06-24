@@ -9,9 +9,9 @@ export default function Hero() {
             <h3 className="font-caption text-3xl">Student at the University of Amiens</h3>
             <p className="text-base">1st MIAGE master's student in Amiens (France). I want to be a <Code>Frontend developer</Code>.</p>
         </div>
-        {/*<div className="flex-1">
-            <img src="https://melvynx.com/images/my-face.png" className="w-full h-auto max-w-xs" alt="Hugo's picture" />
-        </div>*/}
+        <div className="flex-1">
+            <img src="https://www.u-picardie.fr/pmupjv/wp-content/uploads/sites/21/2021/01/logoupjv-blanc.png" className="w-full h-auto max-w-xs" alt="Hugo's picture" />
+        </div>
     </Section>
   )
 }

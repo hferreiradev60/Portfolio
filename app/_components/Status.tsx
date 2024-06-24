@@ -39,8 +39,8 @@ export default function Status() {
         </Card>
         <Card className="p-4 flex-1 flex flex-col gap-3">
           <p className="text-lg text-muted-foreground">Contact me</p>
-          <ContactCard name="hugo-ferreira" image="https://melvynx.com/images/my-face.png" mediumImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgV3rvl_AvDgG9o7p9b_b1sb1ZVChFrvuNQ&s" description="Contact me with Linkedin" url="https://www.linkedin.com/in/hugo-ferreira-5976172a3/"/>
-          <ContactCard name="Hugo FERREIRA" image="https://melvynx.com/images/my-face.png" mediumImage="https://static.vecteezy.com/system/resources/previews/022/484/516/original/google-mail-gmail-icon-logo-symbol-free-png.png" description="Contact me by mail" url="mailto:hugoferreira.dev60@gmail.com" />
+          <ContactCard name="hugo-ferreira" image="profile.png" mediumImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgV3rvl_AvDgG9o7p9b_b1sb1ZVChFrvuNQ&s" description="Contact me with Linkedin" url="https://www.linkedin.com/in/hugo-ferreira-5976172a3/"/>
+          <ContactCard name="Hugo FERREIRA" image="profile.png" mediumImage="https://static.vecteezy.com/system/resources/previews/022/484/516/original/google-mail-gmail-icon-logo-symbol-free-png.png" description="Contact me by mail" url="mailto:hugoferreira.dev60@gmail.com" />
         </Card>
       </div>
     </Section>
@@ -78,20 +78,29 @@ export function ContactCard(props: ContactCardProps) {
 const SIDE_PROJECTS = [
   {
     Logo: Trophy,
+    title: "This portfolio",
+    description: "React, TypeScript, TailwindCSS, Next.js",
+    new: true,
+  },
+  {
+    Logo: Trophy,
     title: "FC Barcelona project",
-    description: "Programming languages : PHP, HTML, CSS",
+    description: "PHP, HTML, CSS",
+    new: false,
   },
   {
     Logo: Trophy,
     title: "Travis Scott website redesign",
     description:
-      "Programming languages : PHP, HTML, CSS",
+      "PHP, HTML, CSS",
+    new: false,
   },
   {
     Logo: Trophy,
     title: "My first portfolio",
-    description: "Programming languages : JS, HTML, CSS",
+    description: "JS, HTML, CSS",
     url: "https://hugo-ferreira.000webhostapp.com/",
+    new: false,
   },
 ];
 
@@ -100,16 +109,20 @@ type SideProjectProps = {
   title: string;
   description: string;
   url: string;
+  new?: boolean;
 };
 
 export function SideProject(props: SideProjectProps) {
   return (
     <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
       <span className="bg-accent text-accent-foreground p-4 rounded-sm">
-              <props.Logo size={16} />
+        <props.Logo size={16} />
       </span>
-      <div>
-        <p className="text-lg font-semibold">{props.title}</p>
+      <div className="mr-auto">
+        <div className="flex items-center gap-2">
+          <p className="text-lg font-semibold">{props.title}</p>
+          {props.new && <Badge variant="outline">New</Badge>}
+        </div>
         <p className="text-sm text-muted-foreground">{props.description}</p>
       </div>
     </Link>
