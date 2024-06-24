@@ -14,18 +14,12 @@ export default function Header() {
             <div className="flex-1" />
             <ul className="flex items-center gap-2">
                 <Link 
-                    href="https://github.com/hferreiradev"
+                    href="https://github.com/hferreiradev60"
                     className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}
                 >
                     <GithubIcon size={15} className="text-foreground" />
                 </Link>
-                {/* <Link 
-                    href="https://www.instagram.com/hugo_frr60/"
-                    className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}
-                >
-                    <InstagramIcon size={15} className="text-foreground" />
-                </Link> */}
-                <Link 
+                <Link
                     href="https://www.linkedin.com/in/hugo-ferreira-5976172a3/"
                     className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}
                 >
