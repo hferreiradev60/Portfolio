@@ -10,7 +10,7 @@ export default function Hero() {
             <p className="text-base">1st MIAGE master's student in Amiens (France). I want to be a <Code>Frontend developer</Code>.</p>
         </div>
         <div className="flex-1">
-            <img src="https://www.u-picardie.fr/pmupjv/wp-content/uploads/sites/21/2021/01/logoupjv-blanc.png" className="w-full h-auto max-w-xs" alt="Hugo's picture" />
+            <img src="profile.png" className="w-full h-auto max-w-xs rounded-full" alt="Hugo's picture" />
         </div>
     </Section>
   )

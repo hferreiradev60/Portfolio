@@ -3,8 +3,9 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
 import Link from "next/link";
-import { ArrowUpRight, Trophy } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import SIDE_PROJECTS, { SideProjectProps } from "../../lib/sideProjects";
 
 export default function Status() {
   return (
@@ -19,7 +20,7 @@ export default function Status() {
                 Logo={project.Logo}
                 title={project.title}
                 description={project.description}
-                url="/"
+                id={project.id}
               />
             ))}
           </div>
@@ -38,9 +39,8 @@ export default function Status() {
           </div>
         </Card>
         <Card className="p-4 flex-1 flex flex-col gap-3">
-          <p className="text-lg text-muted-foreground">Contact me</p>
-          <ContactCard name="hugo-ferreira" image="profile.png" mediumImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgV3rvl_AvDgG9o7p9b_b1sb1ZVChFrvuNQ&s" description="Contact me with Linkedin" url="https://www.linkedin.com/in/hugo-ferreira-5976172a3/"/>
-          <ContactCard name="Hugo FERREIRA" image="profile.png" mediumImage="https://static.vecteezy.com/system/resources/previews/022/484/516/original/google-mail-gmail-icon-logo-symbol-free-png.png" description="Contact me by mail" url="mailto:hugoferreira.dev60@gmail.com" />
+          <p className="text-lg text-muted-foreground">My certifications</p>
+          <ContactCard name="React" image="profile.png" mediumImage="https://pbs.twimg.com/profile_images/1415325668787855361/nxZY4zVv_400x400.png" description="Trainer : Enzo Ustariz - Web School" url="react.jpg"/>
         </Card>
       </div>
     </Section>
@@ -75,46 +75,9 @@ export function ContactCard(props: ContactCardProps) {
   )
 }
 
-const SIDE_PROJECTS = [
-  {
-    Logo: Trophy,
-    title: "This portfolio",
-    description: "React, TypeScript, TailwindCSS, Next.js",
-    new: true,
-  },
-  {
-    Logo: Trophy,
-    title: "FC Barcelona project",
-    description: "PHP, HTML, CSS",
-    new: false,
-  },
-  {
-    Logo: Trophy,
-    title: "Travis Scott website redesign",
-    description:
-      "PHP, HTML, CSS",
-    new: false,
-  },
-  {
-    Logo: Trophy,
-    title: "My first portfolio",
-    description: "JS, HTML, CSS",
-    url: "https://hugo-ferreira.000webhostapp.com/",
-    new: false,
-  },
-];
-
-type SideProjectProps = {
-  Logo: typeof Trophy;
-  title: string;
-  description: string;
-  url: string;
-  new?: boolean;
-};
-
 export function SideProject(props: SideProjectProps) {
   return (
-    <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
+    <Link href={`/projects/${props.id}`} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
       <span className="bg-accent text-accent-foreground p-4 rounded-sm">
         <props.Logo size={16} />
       </span>
@@ -135,7 +98,7 @@ const WORKS: WorkProps[] = [
     title: "Psycle",
     role: "Frontend developer",
     date: "March 2024 - June 2024",
-    url: "/",
+    url: "https://psycle.io/",
     internship: true,
   },
   {
@@ -143,7 +106,7 @@ const WORKS: WorkProps[] = [
     title: "Compucraft",
     role: "Frontend developer",
     date: "April 2023 - June 2023",
-    url: "/",
+    url: "https://www.linkedin.com/company/association-compucraft/about/",
     internship: true,
   },
 ]
