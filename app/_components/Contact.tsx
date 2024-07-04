@@ -10,9 +10,9 @@ export default function Contact() {
             I will be happy to work with you...
         </h2>
         <div className="flex max-md:flex-col w-full gap-4">
-            <ContactCard name="hugo-ferreira" image="profile.png" mediumImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgV3rvl_AvDgG9o7p9b_b1sb1ZVChFrvuNQ&s" description="Contact me with Linkedin" url="https://www.linkedin.com/in/hugo-ferreira-5976172a3/" />
-            <ContactCard name="Hugo FERREIRA" image="profile.png" mediumImage="https://static.vecteezy.com/system/resources/previews/022/484/516/original/google-mail-gmail-icon-logo-symbol-free-png.png" description="Contact me by mail" url="mailto:hugoferreira.dev60@gmail.com" />
-            <ContactCard name="Hugo FERREIRA" image="profile.png" mediumImage="https://media.licdn.com/dms/image/C4D0BAQElun1EoLAubQ/company-logo_200_200/0/1641129238414/upjv_univ_logo?e=2147483647&v=beta&t=2qLOk3UEhJ4VR3W_XAWN2Mu3kpBQzj7Xc48m5no4cX0" description="Contact me on my student mail" url="mailto:hugo.rouville-ferreira@etud.u-picardie.fr" />
+            <ContactCard name="hugo-ferreira" image="https://media.licdn.com/dms/image/D4E03AQEzZ8iCdDEpjg/profile-displayphoto-shrink_800_800/0/1719832856820?e=1725494400&v=beta&t=yqmksf6ELLTNofUBVeb1mrIBhcmc7NKciYu_Mvg9bxw" mediumImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgV3rvl_AvDgG9o7p9b_b1sb1ZVChFrvuNQ&s" description="Contact me with Linkedin" url="https://www.linkedin.com/in/hugo-ferreira-5976172a3/" />
+            <ContactCard name="Hugo FERREIRA" image="https://media.licdn.com/dms/image/D4E03AQEzZ8iCdDEpjg/profile-displayphoto-shrink_800_800/0/1719832856820?e=1725494400&v=beta&t=yqmksf6ELLTNofUBVeb1mrIBhcmc7NKciYu_Mvg9bxw" mediumImage="https://static.vecteezy.com/system/resources/previews/022/484/516/original/google-mail-gmail-icon-logo-symbol-free-png.png" description="Contact me by mail" url="mailto:hugoferreira.dev60@gmail.com" />
+            <ContactCard name="Hugo FERREIRA" image="https://media.licdn.com/dms/image/D4E03AQEzZ8iCdDEpjg/profile-displayphoto-shrink_800_800/0/1719832856820?e=1725494400&v=beta&t=yqmksf6ELLTNofUBVeb1mrIBhcmc7NKciYu_Mvg9bxw" mediumImage="https://media.licdn.com/dms/image/C4D0BAQElun1EoLAubQ/company-logo_200_200/0/1641129238414/upjv_univ_logo?e=2147483647&v=beta&t=2qLOk3UEhJ4VR3W_XAWN2Mu3kpBQzj7Xc48m5no4cX0" description="Contact me on my student mail" url="mailto:hugo.rouville-ferreira@etud.u-picardie.fr" />
         </div>
     </Section>
   )

@@ -9,7 +9,12 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['media.licdn.com', 'pbs.twimg.com'],
+    domains: [
+      'media.licdn.com', 
+      'pbs.twimg.com', 
+      'encrypted-tbn0.gstatic.com', 
+      'static.vecteezy.com'
+    ],
   },
 };
 

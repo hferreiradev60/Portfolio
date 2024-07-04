@@ -5,6 +5,7 @@ import { Section } from "./Section";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import SIDE_PROJECTS, { SideProjectProps } from "../../lib/sideProjects";
 
 export default function Status() {
@@ -40,7 +41,7 @@ export default function Status() {
         </Card>
         <Card className="p-4 flex-1 flex flex-col gap-3">
           <p className="text-lg text-muted-foreground">My certifications</p>
-          <ContactCard name="React" image="profile.png" mediumImage="https://pbs.twimg.com/profile_images/1415325668787855361/nxZY4zVv_400x400.png" description="Trainer : Enzo Ustariz - Web School" url="react.jpg"/>
+          <ContactCard name="React" image="https://media.licdn.com/dms/image/D4E03AQEzZ8iCdDEpjg/profile-displayphoto-shrink_800_800/0/1719832856820?e=1725494400&v=beta&t=yqmksf6ELLTNofUBVeb1mrIBhcmc7NKciYu_Mvg9bxw" mediumImage="https://pbs.twimg.com/profile_images/1415325668787855361/nxZY4zVv_400x400.png" description="Trainer : Enzo Ustariz - Web School" url="react.jpg"/>
         </Card>
       </div>
     </Section>
@@ -60,8 +61,8 @@ export function ContactCard(props: ContactCardProps) {
     <Link href={props.url} className="w-full">
       <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
         <div className="relative">
-          <img src={props.image} alt={props.name} className="w-10 h-10 rounded-full object-contain" />
-          <img src={props.mediumImage} alt={props.name} className="w-4 h-4 absolute -bottom-2 -right-1 rounded-full object-contain" />
+          <Image src={props.image} alt={props.name} width={40} height={40} className="rounded-full object-contain" />
+          <Image src={props.mediumImage} alt={props.name} width={16} height={16} className="absolute -bottom-2 -right-1 rounded-full object-contain" />
         </div>
         <div className="mr-auto">
           <div className="flex items-center gap-2">
@@ -123,7 +124,7 @@ type WorkProps = {
 export function Work(props: WorkProps) {
   return (
     <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
-        <img src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded" />
+      <Image src={props.image} alt={props.title} width={40} height={40} className="object-contain rounded" />
       <div className="mr-auto">
         <div className="flex items-center gap-2">
           <p className="text-lg font-semibold">{props.title}</p>
@@ -137,4 +138,3 @@ export function Work(props: WorkProps) {
     </Link>
   );
 }
-
