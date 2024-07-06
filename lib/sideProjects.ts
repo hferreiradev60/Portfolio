@@ -5,7 +5,7 @@ export type SideProjectProps = {
   Logo: typeof Trophy;
   title: string;
   description: string;
-  url?: string;
+  url: string;
   new?: boolean;
 };
 
@@ -15,7 +15,7 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     Logo: Trophy,
     title: "This portfolio",
     description: "React, TypeScript, TailwindCSS, Next.js",
-    url: "portfolio.pdf",
+    url: "/portfolio.pdf",
     new: true,
   },
   {
@@ -24,6 +24,7 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     title: "FC Barcelona project",
     description: "PHP, HTML, CSS",
     new: false,
+    url: "/fcb.pdf",
   },
   {
     id: "travis-scott-website-redesign",
@@ -31,6 +32,7 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     title: "Travis Scott website redesign",
     description: "PHP, HTML, CSS",
     new: false,
+    url: "/travis.pdf",
   },
   {
     id: "my-first-portfolio",

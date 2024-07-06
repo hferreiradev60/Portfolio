@@ -21,7 +21,8 @@ export default function Status() {
                 Logo={project.Logo}
                 title={project.title}
                 description={project.description}
-                id={project.id}
+                id={project.id} 
+                url={project.url}              
               />
             ))}
           </div>
@@ -78,7 +79,7 @@ export function ContactCard(props: ContactCardProps) {
 
 export function SideProject(props: SideProjectProps) {
   return (
-    <Link href={`/projects/${props.id}`} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
+    <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
       <span className="bg-accent text-accent-foreground p-4 rounded-sm">
         <props.Logo size={16} />
       </span>
